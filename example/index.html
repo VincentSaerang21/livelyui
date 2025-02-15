@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LivelyUI Documentation & Demo</title>
+  <link rel="stylesheet" href="../livelyui.css">
+  <script src="../livelyui.js"></script>
+  <style>
+    
+    /* Demo Styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    .demo-section {
+      margin: 40px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+
+    .demo-box {
+      padding: 20px;
+      margin: 10px 0;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .demo-box:hover {
+      background: #f0f0f0;
+    }
+
+    .code {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      margin: 10px 0;
+    }
+
+    .utility-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .utility-table th, .utility-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .utility-table th {
+      background-color: #f5f5f5;
+    }
+
+    .color-swatch {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="lui-fade-in">LivelyUI Documentation & Demo</h1>
+  <p class="lui-fade-in">LivelyUI adalah framework CSS ringan untuk membuat animasi UI yang hidup dan dinamis.</p>
+
+  <h2 class="lui-fade-in">LivelyUI Installation</h2>
+  
+  <div class="demo-section">
+    <h2 class="lui-fade-in">Installation Methods</h2>
+
+    <!-- CDN Installation -->
+    <h3 class="lui-fade-in">1. CDN (via GitHub)</h3>
+    <p class="lui-fade-in">Tambahkan berikut di <code>&lt;head&gt;</code> HTML Anda:</p>
+    <div class="code">
+      &lt;!-- CSS --&gt;<br>
+      &lt;link rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/gh/VincentSaerang21/livelyui/main/livelyui.css"&gt;<br>
+      <br>
+      &lt;!-- JavaScript --&gt;<br>
+      &lt;script src="https://cdn.jsdelivr.net/gh/VincentSaerang21/livelyui/main/livelyui.js"&gt;&lt;/script&gt;
+    </div>
+
+    <!-- Local Installation -->
+    <h3 class="lui-fade-in">2. Local Installation</h3>
+    <p class="lui-fade-in">Langkah-langkah:</p>
+    <ol class="lui-fade-in">
+      <li>Download file:
+        <ul>
+          <li><a href="../livelyui.css" download>livelyui.css</a></li>
+          <li><a href="../livelyui.js" download>livelyui.js</a></li>
+        </ul>
+      </li>
+      <li>Letakkan file dalam project Anda</li>
+      <li>Tambahkan ke HTML:
+        <div class="code">
+          &lt;link rel="stylesheet" href="path/to/livelyui.css"&gt;<br>
+          &lt;script src="path/to/livelyui.js"&gt;&lt;/script&gt;
+        </div>
+      </li>
+    </ol>
+
+    <!-- Usage Example -->
+    <h3 class="lui-fade-in">Contoh Penggunaan Dasar</h3>
+    <div class="code">
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &nbsp;&nbsp;&lt;link rel="stylesheet" href="livelyui.css"&gt;<br>
+      &nbsp;&nbsp;&lt;script src="livelyui.js"&gt;&lt;/script&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      &nbsp;&nbsp;&lt;button class="lui-scale-up"&gt;Hover Me!&lt;/button&gt;<br>
+      &nbsp;&nbsp;&lt;div class="lui-scroll lui-fade-in"&gt;Scroll Animasi&lt;/div&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;
+    </div>
+  </div>
+
+  <!-- Default Animations -->
+  <div class="demo-section">
+    <h2 class="lui-fade-in">1. Default Animations</h2>
+    <p class="lui-fade-in">Semua elemen dasar memiliki animasi fade in secara default.</p>
+    <div class="demo-box lui-fade-in">
+      <p>Ini adalah contoh elemen dengan animasi fade in default.</p>
+    </div>
+    <div class="code">
+      &lt;div&gt;Ini adalah contoh elemen dengan animasi fade in default.&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Hover Effects -->
+  <div class="demo-section">
+    <h2 class="lui-fade-in">2. Hover Effects</h2>
+    <p class="lui-fade-in">Tombol dan elemen interaktif akan membesar saat di-hover.</p>
+    <button class="lui-scale-up">Hover Saya!</button>
+    <div class="code">
+      &lt;button class="lui-scale-up"&gt;Hover Saya!&lt;/button&gt;
+    </div>
+  </div>
+
+  <!-- Class-Based Animations -->
+  <div class="demo-section">
+    <h2 class="lui-fade-in">3. Class-Based Animations</h2>
+    <p class="lui-fade-in">Gunakan class seperti <code>lui-fade-in</code>, <code>lui-slide-left</code>, atau <code>lui-scale-up</code> untuk mengontrol animasi.</p>
+    <div class="demo-box lui-slide-left">
+      <p>Elemen ini muncul dengan slide dari kiri.</p>
+    </div>
+    <div class="code">
+      &lt;div class="lui-slide-left"&gt;Elemen ini muncul dengan slide dari kiri.&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- On-Scroll Animations -->
+  <div class="demo-section">
+    <h2 class="lui-fade-in">4. On-Scroll Animations</h2>
+    <p class="lui-fade-in">Elemen akan muncul saat masuk ke viewport.</p>
+    <div class="demo-box lui-scroll">
+      <p>Elemen ini muncul saat di-scroll.</p>
+    </div>
+    <div class="code">
+      &lt;div class="lui-scroll"&gt;Elemen ini muncul saat di-scroll.&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Disable Animations -->
+  <div class="demo-section">
+    <h2 class="lui-fade-in">5. Disable Animations</h2>
+    <p class="lui-fade-in">Gunakan class <code>lui-none</code> untuk menonaktifkan animasi.</p>
+    <div class="demo-box lui-none">
+      <p>Elemen ini tidak memiliki animasi.</p>
+    </div>
+    <div class="code">
+      &lt;div class="lui-none"&gt;Elemen ini tidak memiliki animasi.&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Utility Classes -->
+  <div class="demo-section">
+    <h2 class="lui-fade-in">6. Utility Classes</h2>
+    <p class="lui-fade-in">Gunakan utility classes untuk mengatur easing, duration, dan delay.</p>
+    <div class="demo-box lui-fade-in lui-duration-1000 lui-delay-500">
+      <p>Elemen ini muncul dengan durasi 1 detik dan delay 0.5 detik.</p>
+    </div>
+    <div class="code">
+      &lt;div class="lui-fade-in lui-duration-1000 lui-delay-500"&gt;Elemen ini muncul dengan durasi 1 detik dan delay 0.5 detik.&lt;/div&gt;
+    </div>
+  </div>
+  <div class="demo-section">
+    <h2 class="lui-fade-in">7. Utility Classes</h2>
+    
+    <h3 class="lui-fade-in">Duration Options</h3>
+    <table class="utility-table">
+      <tr>
+        <th>Class</th>
+        <th>Value</th>
+        <th>Keterangan</th>
+      </tr>
+      <tr>
+        <td><code>.lui-duration-100</code></td>
+        <td>0.1s</td>
+        <td>Durasi sangat cepat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-duration-200</code></td>
+        <td>0.2s</td>
+        <td>Durasi cepat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-duration-300</code></td>
+        <td>0.3s</td>
+        <td>Durasi sedang-cepat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-duration-500</code></td>
+        <td>0.5s</td>
+        <td>Durasi standar (default)</td>
+      </tr>
+      <tr>
+        <td><code>.lui-duration-700</code></td>
+        <td>0.7s</td>
+        <td>Durasi lambat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-duration-1000</code></td>
+        <td>1s</td>
+        <td>Durasi sangat lambat</td>
+      </tr>
+    </table>
+
+    <h3 class="lui-fade-in">Delay Options</h3>
+    <table class="utility-table">
+      <tr>
+        <th>Class</th>
+        <th>Value</th>
+        <th>Keterangan</th>
+      </tr>
+      <tr>
+        <td><code>.lui-delay-100</code></td>
+        <td>0.1s</td>
+        <td>Delay sangat singkat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-delay-200</code></td>
+        <td>0.2s</td>
+        <td>Delay singkat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-delay-300</code></td>
+        <td>0.3s</td>
+        <td>Delay sedang</td>
+      </tr>
+      <tr>
+        <td><code>.lui-delay-500</code></td>
+        <td>0.5s</td>
+        <td>Delay standar</td>
+      </tr>
+      <tr>
+        <td><code>.lui-delay-700</code></td>
+        <td>0.7s</td>
+        <td>Delay panjang</td>
+      </tr>
+      <tr>
+        <td><code>.lui-delay-1000</code></td>
+        <td>1s</code></td>
+        <td>Delay sangat panjang</td>
+      </tr>
+    </table>
+
+    <h3 class="lui-fade-in">Easing Options</h3>
+    <table class="utility-table">
+      <tr>
+        <th>Class</th>
+        <th>Value</th>
+        <th>Kurva</th>
+      </tr>
+      <tr>
+        <td><code>.lui-ease-in</code></td>
+        <td>ease-in</td>
+        <td>Mulai pelan, akhir cepat</td>
+      </tr>
+      <tr>
+        <td><code>.lui-ease-out</code></td>
+        <td>ease-out</td>
+        <td>Mulai cepat, akhir pelan</td>
+      </tr>
+      <tr>
+        <td><code>.lui-ease-in-out</code></td>
+        <td>ease-in-out</td>
+        <td>Pelan di awal dan akhir (default)</td>
+      </tr>
+    </table>
+
+    <h3 class="lui-fade-in">Contoh Kombinasi</h3>
+    <div class="demo-box lui-fade-in lui-duration-700 lui-delay-500 lui-ease-out">
+      <p>Animasi ini memiliki:<br>
+        - Durasi 0.7s<br>
+        - Delay 0.5s<br>
+        - Easing ease-out</p>
+    </div>
+    <div class="code">
+      &lt;div class="lui-fade-in lui-duration-700 lui-delay-500 lui-ease-out"&gt;
+        &lt;p&gt;Animasi dengan kombinasi utility classes&lt;/p&gt;
+      &lt;/div&gt;
+    </div>
+  </div>
+
+</body>
+</html>

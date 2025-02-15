@@ -1,0 +1,94 @@
+/* LivelyUI CSS */
+:root {
+    --lui-duration: 0.5s;
+    --lui-easing: ease-in-out;
+    --lui-scale-up: 1.15;
+  }
+
+  body * {
+    opacity: 0;
+    animation: lui-fade-in var(--lui-duration) var(--lui-easing) forwards;
+  }
+
+  button, a, .lui-hover-grow:hover {
+    transform: scale(1);
+    transition: transform 0.3s var(--lui-easing);
+  }
+
+  button:hover, a:hover, .lui-hover-grow:hover {
+    transform: scale(var(--lui-scale-up));
+  }
+
+  .lui-fade-in {
+    opacity: 0;
+    animation: lui-fade-in var(--lui-duration) var(--lui-easing) forwards;
+  }
+
+  @keyframes lui-fade-in {
+    to { opacity: 1; }
+  }
+
+  .lui-slide-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: lui-slide-left var(--lui-duration) var(--lui-easing) forwards;
+  }
+
+  @keyframes lui-slide-left {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .lui-slide-right {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: lui-slide-right var(--lui-duration) var(--lui-easing) forwards;
+  }
+
+  @keyframes lui-slide-right {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .lui-scale-up {
+    transform: scale(1);
+    transition: transform 0.3s var(--lui-easing);
+  }
+
+  .lui-scale-up:hover {
+    transform: scale(var(--lui-scale-up));
+  }
+
+  .lui-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--lui-duration) var(--lui-easing), transform var(--lui-duration) var(--lui-easing);
+  }
+
+  .lui-scroll.lui-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .lui-none {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .lui-ease-in { --lui-easing: ease-in; }
+  .lui-ease-out { --lui-easing: ease-out; }
+  .lui-ease-in-out { --lui-easing: ease-in-out; }
+
+  .lui-duration-100 { --lui-duration: 0.1s; }
+  .lui-duration-200 { --lui-duration: 0.2s; }
+  .lui-duration-300 { --lui-duration: 0.3s; }
+  .lui-duration-500 { --lui-duration: 0.5s; }
+  .lui-duration-700 { --lui-duration: 0.7s; }
+  .lui-duration-1000 { --lui-duration: 1s; }
+
+  .lui-delay-100 { animation-delay: 0.1s; }
+  .lui-delay-200 { animation-delay: 0.2s; }
+  .lui-delay-300 { animation-delay: 0.3s; }
+  .lui-delay-500 { animation-delay: 0.5s; }
+  .lui-delay-700 { animation-delay: 0.7s; }
+  .lui-delay-1000 { animation-delay: 1s; }
